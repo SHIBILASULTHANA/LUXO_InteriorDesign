@@ -1,0 +1,144 @@
+{% extends "web/base.html" %}
+{% load static %}
+{% block content %}  
+    <!-- breadcrumb area -->
+    <div class="breadcrumb-area breadcrumb-padding bg-img" style="background-image:url(static/web/images/bg/bg-2.jpg)">
+        <div class="container">
+            <div class="breadcrumb-content text-center">
+                <h2>Blog Details</h2>
+                <ul>
+                    <li><a href="{% url 'home' %}">Home</a></li>
+                    <li><i class="fa fa-angle-right"></i></li>
+                    <li>Blog Details</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- Project area -->
+    <div class="section section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-9">
+                    <div class="blog-details-wrap">
+                        <div class="blog-details-img mb-4 mb-md-6">
+                            <img src="{{blog.detail_image.url}}" alt="">
+                        </div>
+                        <div class="blog-details-meta">
+                            <ul>
+                                <li>{{blog.date}}</li>
+                                <li>{{blog.category}}</li>
+                            </ul>
+                        </div>
+                        <h1 class="title">{{blog.title}}</h1>
+                        <p>{{blog.description}}</p>
+                        <blockquote class="blockquote-wrap">
+                            <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.</p>
+                            <h4 class="name">- Jont utdo</h4>
+                        </blockquote>
+                        <p>{{blog.description}}</p>
+                        <div class="blog-details-middle-img-wrap">
+                            <div class="row row-cols-lg-2">
+                                <div class="col">
+                                    <div class="blog-details-middle-img">
+                                        <img src="{{blog.related_image1.url}}" alt="">
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="blog-details-middle-img">
+                                        <img src="{{blog.related_image2.url}}" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <p>{{blog.description}}</p>
+                        <div class="tag-share">
+                            <div class="blog-details-tag">
+                                <span>Tags:</span>
+                                <ul>
+                                    <li><a href="#">Interior</a>,</li>
+                                    <li><a href="#">Building </a>,</li>
+                                    <li><a href="#">Architecture</a></li>
+                                </ul>
+                            </div>
+                            <div class="social-icon-style">
+                                <a class="facebook" href="#"><i class="fa fa-facebook"></i></a>
+                                <a class="twitter" href="#"><i class="fa fa-twitter"></i></a>
+                                <a class="google-plus" href="#"><i class="fa fa-google-plus"></i></a>
+                                <a class="behance" href="#"><i class="fa fa-behance"></i></a>
+                            </div>
+                        </div>
+                        <div class="blog-next-previous-post">
+                            <div class="blog-prev-post-wrap">
+                                <div class="blog-prev-post-icon">
+                                    <a href="{% url 'blog' %}"><i class="fa fa-angle-left"></i> Previous</a>
+                                </div>
+                                <h3 class="title"><a href=""> Focussed on designing new homes.</a></h3>
+                            </div>
+                            <div class="blog-next-post-wrap">
+                                <div class="blog-next-post-icon">
+                                    <a href="{% url 'blog' %}">Next <i class="fa fa-angle-right"></i> </a>
+                                </div>
+                                <h3 class="title"><a href="">Suggest way to decoration work place.</a></h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="sidebar-wrap sidebar-margin-left">
+                        <div class="sidebar-widget search-wrap-2 mb-10">
+                            <form action="#">
+                                <input placeholder="Search" type="text">
+                                <button class="button-search-2"><i class="dlicon ui-1_zoom"></i></button>
+                            </form>
+                        </div>
+                        <div class="sidebar-widget mb-10">
+                            <h3 class="sidebar-widget-title">Recent Post </h3>
+                            <div class="sidebar-blog-wrap">
+                                <div class="single-sidebar-blog">
+                                    <div class="sidebar-blog-img">
+                                        <a href=""><img src="{% static 'web/images/blog/sidebar-2.jpg' %}" alt=""></a>
+                                    </div>
+                                    <div class="sidebar-blog-content">
+                                        <span class="category"><a href="#">Architecture</a></span>
+                                        <h4 class="title"><a href="">Architecture Design</a></h4>
+                                    </div>
+                                </div>
+                                <div class="single-sidebar-blog">
+                                    <div class="sidebar-blog-img">
+                                        <a href=""><img src="{% static 'web/images/blog/sidebar-1.jpg' %}" alt=""></a>
+                                    </div>
+                                    <div class="sidebar-blog-content">
+                                        <span class="category"><a href="#">Interior</a></span>
+                                        <h4 class="title"><a href="">Home Interior Design</a></h4>
+                                    </div>
+                                </div>
+                                <div class="single-sidebar-blog">
+                                    <div class="sidebar-blog-img">
+                                        <a href=""><img src="{% static 'web/images/blog/sidebar-3.jpg' %}" alt=""></a>
+                                    </div>
+                                    <div class="sidebar-blog-content">
+                                        <span class="category"><a href="#">Branding</a></span>
+                                        <h4 class="title"><a href="">Office Interior Design</a></h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sidebar-widget">
+                            <h3 class="sidebar-widget-title">Categories </h3>
+                            <div class="sidebar-categori">
+                                <ul>
+                                    <li><a href="#">Interior <span>(09)</span></a></li>
+                                    <li><a href="#">Branding <span>(16)</span></a></li>
+                                    <li><a href="#">Interior <span>(10)</span></a></li>
+                                    <li><a href="#">Industrial <span>(07)</span></a></li>
+                                    <li><a href="#">Construction <span>(18)</span></a></li>
+                                    <li><a href="#">Architecture <span>(20)</span></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}   

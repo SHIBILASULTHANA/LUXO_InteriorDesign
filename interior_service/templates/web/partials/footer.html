@@ -1,0 +1,82 @@
+{% load static %}
+<!-- Footer area -->
+<footer class="section bg-black">
+    <div class="footer-top section-padding">
+        <div class="container">
+            <div class="row row-cols-lg-4 row-cols-md-2 row-cols-sm-2 row-cols-1 mb-n8">
+                <div class="col mb-8">
+                    <div class="footer-widget footer-about">
+                        <div class="footer-logo">
+                            <a href="{% url 'home' %}"><h1 style="color:#d5ac63;">LUXO</h1></a>
+                            <p>Luxo Interior Design</p>
+                        </div>
+                        <p>Lorem Ipsum is simply dummy text datra of the printing and typesetting industry.</p>
+                        <div class="social-icon-style">
+                            <a class="facebook" href="#"><i class="fa fa-facebook"></i></a>
+                            <a class="twitter" href="#"><i class="fa fa-twitter"></i></a>
+                            <a class="google-plus" href="#"><i class="fa fa-google-plus"></i></a>
+                            <a class="behance" href="#"><i class="fa fa-behance"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col mb-8">
+                    <div class="footer-widget footer-list">
+                        <h3 class="footer-title">Useful Link</h3>
+                        <ul>
+                            <li><a href="{% url 'contactus' %}">Privacy Policy</a></li>
+                            <li><a href="{% url 'contactus' %}">Help & Contact Us</a></li>
+                            <li><a href="{% url 'services' %}">Terms of Service </a></li>
+                            <li><a href="{% url 'blog' %}">Our Blogs</a></li>
+                            <li><a href="{% url 'contactus' %}">Contact Us </a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col mb-8">
+                    <div class="footer-widget footer-list">
+                        <h3 class="footer-title">Contact Us</h3>
+                        <ul>
+                            <li>
+                                <span class="title">T:</span>
+                                <span class="desc">0483 021 23 34</span>
+                            </li>
+                            <li>
+                                <span class="title">E:</span>
+                                <span class="desc">luxo@interior.com </span>
+                            </li>
+                            <li>
+                                <span class="title">A:</span>
+                                <span class="desc">ABC Tower, near Calicut Airport Kerala</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col mb-8">
+                    <div class="footer-widget footer-newsletter">
+                        <h3 class="footer-title">Newsletter</h3>
+                        <p>Get E-mail updates about our latest news and special offers.</p>
+                        <div class="subscribe-form">
+                            <form  class="validate" >
+                                <div class="mc-form">
+                                    <input class="email" type="email" required="" placeholder="Enter your email here.." name="EMAIL" value="">
+                                    <div class="mc-news" aria-hidden="true">
+                                        <input type="text" value="">
+                                    </div>
+                                    <div class="clear">
+                                        <input class="button" type="submit" name="subscribe" value="Subscribe">
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <div class="container">
+            <div class="copyright text-center">
+                <p>Copyright ©2023 All rights reserved | Made with <i class="fa fa-heart"></i> by <a href=""> Shibila Sulthana </a>.</p>
+            </div>
+        </div>
+    </div>
+</footer>

@@ -1,0 +1,54 @@
+{% extends "web/base.html" %}
+{% load static %}
+{% block content %} 
+    <!-- breadcrumb area -->
+    <div class="breadcrumb-area breadcrumb-padding bg-img" style="background-image:url(static/web/images/bg/bg-2.jpg)">
+        <div class="container">
+            <div class="breadcrumb-content text-center">
+                <h2>Our Projects</h2>
+                <ul>
+                    <li><a href="{% url 'home' %}">Home</a></li>
+                    <li><i class="fa fa-angle-right"></i></li>
+                    <li>Gallery</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- Project area -->
+    <div class="section section-padding">
+        <div class="container">
+            <div class="project-menu-style project-menu-active isotope-btn-add-active mb-6">
+                <button class="active btn-project" data-filter="*">All</button>
+                <button class="btn-project" data-filter=".cat1">Interior</button>
+                <button class="btn-project" data-filter=".cat2">Architecture</button>
+                <button class="btn-project" data-filter=".cat3">Design</button>
+                <button class="btn-project" data-filter=".cat4">Building</button>
+            </div>
+            <div class="row row-cols-lg-2 row-cols-md-2 row-cols-sm-2 row-cols-1 mb-n6 grid">
+                {% for service in services %}
+                <div class="col mb-6 grid-item cat1 cat2 cat4">
+                    <div class="project-wrap">
+                        <div class="project-inner">
+                            <a class="thumbnail" href="{% url 'service_details' service.id %}">
+                                <img src="{{service.image.url}}" alt="Blog Image">
+                            </a>
+                            <div class="project-content">
+                                <span class="category"><a href="{% url 'service_details' service.id %}">{{service.category}}</a></span>
+                                <h3 class="title"><a href="{% url 'service_details' service.id %}">{{service.title}}</a></h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %} 
+            </div>
+            <div class="pagination-style mt-6 mt-md-8 mt-lg-10">
+                <ul>
+                    <li><a class="active" href="#">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a class="next" href="#"><i class="fa fa-angle-double-right "></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+{% endblock %}

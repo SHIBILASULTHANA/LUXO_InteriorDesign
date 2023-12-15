@@ -1,0 +1,70 @@
+{% extends "web/base.html" %}
+{% load static %}
+{% block content %}
+    <!-- breadcrumb area -->
+    <div class="breadcrumb-area breadcrumb-padding bg-img" style="background-image:url(static/web/images/bg/bg-2.jpg)">
+        <div class="container">
+            <div class="breadcrumb-content text-center">
+                <h2>Service Details</h2>
+                <ul>
+                    <li><a href="{% url 'home' %}">Home</a></li>
+                    <li><i class="fa fa-angle-right"></i></li>
+                    <li>Service Details</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- Project area -->
+    <div class="section section-padding">
+        <div class="container">
+            <div class="project-details-wrap">
+                <div class="project-details-img mb-5 mb-md-9">
+                    <img src="{{category.category_image.url}}" alt="Project Image">
+                </div>
+                <div class="row">
+                    <div class="col-lg-9 col-md-8">
+                        <div class="project-details-content mb-4 mb-md-9">
+                            <span class="category">{{category.category_name}}</span>
+                            <h1 class="title">{{category.category_title}}</h1>
+                            <p>{{category.category_description}}</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4">
+                        <div class="project-details-info">
+                            <ul>
+                                <li><span>Name: </span>Mohan Raj</li>
+                                <li><span>Email: </span>luxo@interior.com</li>
+                                <li><span>Release: </span>April 2021</li>
+                                <li><span>URL: </span><a href="#">https://www.luxo.com</a></li>
+                                <li><span>Address: </span>ABC Tower, near Calicut Airport Kerala</li>
+                            </ul>
+                        </div>
+                        <div class="social-icon-style mb-5">
+                            <a class="facebook" href="#"><i class="fa fa-facebook"></i></a>
+                            <a class="twitter" href="#"><i class="fa fa-twitter"></i></a>
+                            <a class="google-plus" href="#"><i class="fa fa-google-plus"></i></a>
+                            <a class="behance" href="#"><i class="fa fa-behance"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="row row-cols-lg-3 row-cols-md-3 row-cols-sm-3 row-cols-1 mb-n6">
+                    <div class="col mb-6">
+                        <div class="project-details-img">
+                            <img src="{{category.related_image1.url}}" alt="Project Image">
+                        </div>
+                    </div>
+                    <div class="col mb-6">
+                        <div class="project-details-img">
+                            <img src="{{category.related_image2.url}}" alt="Project Image">
+                        </div>
+                    </div>
+                    <div class="col mb-6">
+                        <div class="project-details-img">
+                            <img src="{{category.related_image3.url}}" alt="Project Image">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
